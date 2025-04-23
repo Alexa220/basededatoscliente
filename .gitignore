@@ -1,2 +1,15 @@
-*.agdai
-MAlonzo/**
+
+-- Crear base de datos
+CREATE DATABASE IF NOT EXISTS yuryrocha_db;
+USE yuryrocha_db;
+
+-- Crear tabla para citas
+CREATE TABLE IF NOT EXISTS citas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    fecha DATE NOT NULL,
+    hora TIME NOT NULL,
+    motivo TEXT NOT NULL,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
